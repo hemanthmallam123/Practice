@@ -4,11 +4,15 @@ metadata:
   name: nginx
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: nginx=hemanthmallam123/nginx
+    argocd-image-updater.argoproj.io/image-list: nginx=hemanthmallam123/nginx:1.14.2
     argocd-image-updater.argoproj.io/nginx.update-strategy: semver
-    argocd-image-updater.argoproj.io/nginx.helm.image-name: image.repository
-    argocd-image-updater.argoproj.io/nginx.helm.image-tag: image.tag
+    argocd-image-updater.argoproj.io/nginx.allow-tags: regexp:^1\..*
+    argocd-image-updater.argoproj.io/nginx.helm.image-name: values.image.repository
+    argocd-image-updater.argoproj.io/nginx.helm.image-tag: values.image.tag
     argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/nginx.update-strategy: latest
+    argocd-image-updater.argoproj.io/nginx.allow-tags: ".*"
+
 
 spec:
   project: default
