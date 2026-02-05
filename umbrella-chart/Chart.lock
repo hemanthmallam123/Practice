@@ -1,0 +1,9 @@
+dependencies:
+- name: helloworld
+  repository: file://../helloworld
+  version: 0.1.0
+- name: nginx
+  repository: file://../nginx
+  version: 0.1.0
+digest: sha256:7fb8ecd31b0430ed5c6b7f998dafb8d501f5ed3f5bb2397c9f4c6596f683c2b5
+generated: "2026-02-05T18:05:38.83154275Z"
